@@ -61,7 +61,7 @@ body {
 @media (max-width:768px) {
     .navbar{
         justify-content: space-between;
-        padding: 0 15px;
+        padding: 0 15px 20px;
     }
     .navbar-socialmedia {
         display: none;
@@ -172,6 +172,21 @@ body {
     }
 }
 /* ----------------------main------------------- */
+/* -----------------------h1-------------------- */
+.h1-container {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+}
+.h1-container h1 {
+    display: flex;
+    height: auto;
+    border: 5px groove #bc9e84;
+    padding: 2px 20px;
+}
+/* --------------------grid-area---------------- */
 .b1, .c1 {
     grid-area: a1;
 }
@@ -205,34 +220,43 @@ body {
     padding: 15px;
     background-color: #bc9e84;
 }
-/* --------------------pages grid------------------- */
-    .menu-men-container {
+.box-pages:hover {
+    background-color: #b0845e;
+}
+/* --------------------pages-grid------------------- */
+.menu-index {
+    padding-bottom: 60px;
+}    
+.menu-men-container {
+    padding: 50px 0 50px;
+}
+.menu-men-container {
         display: flex;
         width: 100%;
         justify-content: center;
-    }
-    .box-img {
+}
+.box-img {
         display: flex;
         width: 100%;
         height: 100%;
         padding-bottom: 15px;
         object-fit: cover;
-    }
-    .box-contain {
+}
+.box-contain {
         display: flex;
         flex-direction: column;
         width: auto;
         height: auto;
         align-items: center;
-    }    
-    .box-contain p {
+}    
+.box-contain p {
         text-align: justify;
         padding: 10px;
         font-size: 18px;
-    }
+}
 /* ----------------------media query desktop--------------------- */
 @media (min-width: 1024px) {
-    /* -----------------index------------------ */
+/* -----------------index------------------ */
     .menu-index {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -247,7 +271,7 @@ body {
         'a4 a4 a5 a5 a6 a6'
         'a4 a4 a5 a5 a6 a6';
     }
-    /* -----------------pages------------------- */
+/* -----------------pages------------------- */
     .menu-men {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -362,33 +386,105 @@ body {
 }
 /* --------------------/main------------------- */
 /* ---------------------about------------------ */
+.about-container,
+.vision-container {
+    display: flex;
+    width: 80%;
+    height: auto;
+    align-items: center;
+    background-color:#b0845e;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.vision-container
+ .local-content {
+    padding: 25px 25px 0;
+}
+.about-img {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+@media (min-width: 1023px) {
+    .about-container,
+    .vision-container {
+        flex-direction: row;
+    }
+}
+@media (min-width: 769px) and (max-width: 1023px) {
+    .about-container {
+        flex-direction: column;
+    }
+    .vision-container {
+        flex-direction: column-reverse;
+    }
+    .about-img {
+        height: 300px;
+    }
+}
+@media (max-width: 768px){
+    .about-container, 
+    .vision-container {
+        width: 100%;
+    }
+    .about-container {
+        flex-direction: column;
+    }
+    .vision-container {
+        flex-direction: column-reverse;
+    }
+    .about-img {
+        height: 300px;
+    }
+}
 /* --------------------locales----------------- */
 .local {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 30px;
 }
 .local-container {
     display: flex;
     flex-direction: row;
     width: 80%;
     height: auto;
-    background-color:#b0845e;
+    background-color:#bc9e84;
     margin-bottom: 20px;
     padding: 10px;
+}
+.local-container:hover {
+    background-color: #b0845e;
+}
+.local-content h2 {
+    border: 5px groove #bc9e84;
+    padding: 2px 20px;
+}
+@media (min-width: 1024px) {
+.local-container {
+    align-items: center;
 }
 .local-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
+    text-align: center;
+    font-size: 20px;
     width: 50%;
     height: 100%;
     padding: 30px;
 }
-.local-map {
+.local-content p {
+    padding-top: 30px;
+}
+.local-map,
+.local-img {
+    display: flex;
     width: 50%;
     height: 100%;
+    justify-content: center;
     padding: 10px 0 10px 0;
     overflow: hidden;
 }
@@ -408,34 +504,173 @@ body {
     height: 400px;
     object-fit: cover;
 }
-
-/* -------------------formulario--------------- */
-.registro-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 580px;
 }
-.registro-form {
+@media (min-width: 769px) and (max-width: 1023px) {
+.local-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.local-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    font-size: 20px;
+    text-align: center;
+    width: 80%;
+    height: 50%;
+    padding: 15px;
+}
+.local-map {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+.local-img {
+    width: 80%;
+    height: 50%;
+    padding: 20px 0 10px;
+}
+.local-map iframe {
+    display: flex;
+    width: 500px;
+    height: 400px;
+    
+}
+.carousel-item .carousel-local-img {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+}
+}
+@media (max-width: 768px) {
+    .local-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+    }
+    .local-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+        height: 50%;
+        padding: 15px 15px 2px;
+    }
+    .local-map {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        padding: 10px 0 10px 0;
+        overflow: hidden;
+        padding-bottom: 30px;
+    }
+    .local-img {
+        width: 100%;
+        height: 50%;
+        padding-bottom: 10px;
+    }
+    .local-map iframe {
+        display: flex;
+        width: 400px;
+        height: 300px;
+        
+    }
+    .carousel-item .carousel-local-img {
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+    }
+    }
+/* -------------------formulario--------------- */
+.contact-form {
     display: flex;
     flex-direction: column;
     background-color: #b0845e;
     width: 60%;
-    height: 490px;
+    height: auto;
     border: 3px groove #bc9e84;
     padding: 20px;
 }
-.registro-form input,
-.registro-form textarea,
-.registro-form button {
+.contact-form h2 {
+    display: flex;
+    align-self: center;
+    border: 5px groove #bc9e84;
+    padding: 2px 20px;
+}
+.button-container {
+    display: flex;
+    background-color: #b0845e;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+.contact-form .mb-3 .button-container .send-button {
+    display: flex;
+    background-color: #956f4e;
+    width: 100px;
+    height: 30px;
+    justify-content: center;
+}
+@media (min-width: 1024px) {
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 590px;
+}
+.contact-form input,
+.contact-form textarea {
     background-color: #d7cec7;
+}
+}
+@media (min-width: 769px) and (max-width: 1023px) {
+    .contact-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 600px;
+    }
+    .contact-form input,
+    .contact-form textarea{
+        background-color: #d7cec7;
+    }
+}
+@media (max-width: 768px) {
+    .contact-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 580px;
+    }
+    .contact-form {
+        width: 100%;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        background-color: #d7cec7;
+    }
 }
 /* ---------------------footer----------------- */
 .footer-container {
     display: flex;
     background-color: #bc9e84;
     border-top:3px groove #b0845e;
+    margin-top: 30px;
 }
 @media (min-width: 769px) {
     .footer-container {
