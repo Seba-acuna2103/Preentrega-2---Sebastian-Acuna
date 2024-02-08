@@ -1,0 +1,39 @@
+/* -------------------carouseles------------------ */
+.carousel-item img {
+    width: 100%;
+    object-fit: cover; 
+} 
+.b2, .b4, .b6 {
+    background-color: #b0845e;
+}
+@media (max-width: 768px) {
+     .carousel-item img {
+        height: 300px;
+    }
+    .b2 .carousel
+    .carousel-inner .carousel-item img,
+    .b4 .carousel
+    .carousel-inner .carousel-item img,
+    .b6 .carousel
+    .carousel-inner .carousel-item img {
+        object-fit: contain;
+    }
+}
+@media (min-width: 769px) and (max-width: 1023px) {
+    .carousel-item img {
+        height: 450px;
+    }
+    .b2 .carousel
+    .carousel-inner .carousel-item img,
+    .b4 .carousel
+    .carousel-inner .carousel-item img,
+    .b6 .carousel
+    .carousel-inner .carousel-item img {
+        object-fit: contain;
+    }
+}
+@media (min-width: 1024px) {
+     .carousel-item img {
+        height: 600px;
+    }
+}

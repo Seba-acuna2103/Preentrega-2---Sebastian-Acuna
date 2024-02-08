@@ -1,0 +1,70 @@
+/* -------------base------------- */
+@import "base/vars";
+@import "base/reset";
+/* ----------components---------- */
+@import "components/navbar";
+@import "components/carousel";
+@import "components/button";
+@import "components/tittle";
+@import "components/footer";
+/* -----------layouts------------ */
+@import "layouts/mediaqueries";
+@import "layouts/flex";
+@import "layouts/grid";
+/* ------------welcome------------- */
+.welcome-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 35px;
+    &-contain {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: $primary--bg-color;
+        width: 65vw;
+        height: auto;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding-right: 40px;
+        margin-bottom: 40px;
+        &-info {
+            padding: 30px;
+            h1 {
+                padding: 20px;
+            }
+            & p {
+                font-size: 20px;
+            }
+        }
+    }
+    &-img {
+        display: flex;
+        background-color: $primary--bg-color;
+        justify-content: center;
+        & img {
+            justify-self: center;
+            width: 45vw;
+            object-fit: contain;
+        }
+    }
+}
+/* -------------------formulario--------------- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #b0845e;
+    width: 60%;
+    height: auto;
+    border: 3px groove #bc9e84;
+    padding: 20px;
+    & h2 {
+        display: flex;
+        align-self: center;
+        border: 5px groove #bc9e84;
+        padding: 2px 20px;
+    }
+}
+h3 {
+    color: aqua;
+}

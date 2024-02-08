@@ -1,0 +1,11 @@
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    background-color: $secondary--bg-color;
+    border-top:3px groove $tertiary--bg-color;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+    
+    

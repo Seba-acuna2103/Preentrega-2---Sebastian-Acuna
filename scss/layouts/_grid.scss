@@ -1,0 +1,198 @@
+/* --------------------grid-area---------------- */
+.b1, .c1 {
+    grid-area: a1;
+}
+.b2, .c2 {
+    grid-area: a2;
+}
+.b3, .c3 {
+    grid-area: a3;
+}
+.b4, .c4 {
+    grid-area: a4;
+}
+.b5, .c5 {
+    grid-area: a5;
+}
+.b6, .c6 {
+    grid-area: a6;
+}
+.b1, .b3, .b5{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary--bg-color;
+    color: $primary--font-color;
+    width: 100%;
+    height: 100%;
+}  
+.c1, .c2, .c3, .c4, .c5, .c6 {
+    padding: 15px;
+    background-color: $secondary--bg-color;
+}
+.box-pages:hover {
+    background-color: $tertiary--bg-color;
+}
+/* --------------------pages-grid------------------- */
+.menu-index {
+    padding-bottom: 60px;
+}    
+.menu-men-container {
+    padding: 50px 0 50px;
+}
+.menu-men-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+}
+.box-img {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 15px;
+        object-fit: cover;
+}
+.box-contain {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        align-items: center;
+}    
+.box-contain p {
+        text-align: justify;
+        padding: 10px;
+        font-size: 18px;
+}
+/* ----------------------media query desktop--------------------- */
+@media (min-width: 1024px) {
+/* -----------------index------------------ */
+    .menu-index {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        background-color: $primary--bg-color;
+        overflow: hidden;
+        grid-template-areas: 
+        'a1 a1 a2 a2 a3 a3'
+        'a1 a1 a2 a2 a3 a3'
+        'a1 a1 a2 a2 a3 a3'
+        'a4 a4 a5 a5 a6 a6'
+        'a4 a4 a5 a5 a6 a6'
+        'a4 a4 a5 a5 a6 a6';
+    }
+/* -----------------pages------------------- */
+    .menu-men {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        gap: 20px;
+        width: 80%;
+        background-color: $primary--bg-color;
+        grid-template-areas: 
+        'a1 a1 a2 a2 a3 a3'
+        'a1 a1 a2 a2 a3 a3'
+        'a1 a1 a2 a2 a3 a3'
+        'a4 a4 a5 a5 a6 a6'
+        'a4 a4 a5 a5 a6 a6'
+        'a4 a4 a5 a5 a6 a6';
+    }
+    .box-contain {
+        padding: 20px ;
+    }
+} 
+/* ---------------------media query tablet------------------- */
+@media (min-width: 769px) and (max-width: 1023px) {
+    /* -------------------index------------------ */
+    .menu-index {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        background-color: $primary--bg-color;
+        grid-template-areas: 
+        'a1 a1 a2 a2'
+        'a1 a1 a2 a2'
+        'a1 a1 a2 a2'
+        'a4 a4 a3 a3'
+        'a4 a4 a3 a3'
+        'a4 a4 a3 a3'
+        'a5 a5 a6 a6'
+        'a5 a5 a6 a6'
+        'a5 a5 a6 a6';
+    }
+    /* -------------------pages------------------ */
+    .menu-men {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(6, 9fr);
+            gap: 20px;
+            width: 80%;
+            background-color: $primary--bg-color;
+            grid-template-areas: 
+            'a1 a1 a2 a2'
+            'a1 a1 a2 a2'
+            'a1 a1 a2 a2'
+            'a3 a3 a4 a4'
+            'a3 a3 a4 a4'
+            'a3 a3 a4 a4'
+            'a5 a5 a6 a6'
+            'a5 a5 a6 a6'
+            'a5 a5 a6 a6';
+        }
+    .box-contain {
+        padding: 30px ;
+    }
+}
+/* -------------------media query mobile-------------------- */
+@media (max-width: 768px) {
+    /* ------------------index----------------- */
+    .menu-index {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, auto);
+        background-color: $primary--bg-color;
+        grid-template-areas: 
+        'a2'
+        'a2'
+        'a1'
+        'a4'
+        'a4'
+        'a3'
+        'a6'
+        'a6'
+        'a5';
+    }
+    /* -----------------pages----------------- */
+    .menu-men {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(12, 9fr);
+        gap: 20px;
+        width: 100%;
+        background-color: $primary--bg-color;
+        grid-template-areas: 
+        'a1 a1'
+        'a1 a1'
+        'a1 a1'
+        'a2 a2'
+        'a2 a2'
+        'a2 a2'
+        'a3 a3'
+        'a3 a3'
+        'a3 a3'
+        'a4 a4'
+        'a4 a4'
+        'a4 a4'
+        'a5 a5'
+        'a5 a5'
+        'a5 a5'
+        'a6 a6'
+        'a6 a6'
+        'a6 a6';
+    }
+    .box-contain {
+        padding: 40px ;
+    }
+}
