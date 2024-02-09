@@ -19,15 +19,14 @@
     &-contain {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         background-color: $primary--bg-color;
         width: 65vw;
         height: auto;
-        justify-content: center;
-        align-content: center;
+        justify-items: center;
+        align-items: center;
         text-align: center;
         padding-right: 40px;
-        margin-bottom: 40px;
+        margin-top: 30px;
         &-info {
             padding: 30px;
             h1 {
@@ -64,7 +63,4 @@
         border: 5px groove #bc9e84;
         padding: 2px 20px;
     }
-}
-h3 {
-    color: aqua;
 }

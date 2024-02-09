@@ -26,8 +26,7 @@
             background-color: #d7cec7;
             }
         }
-    }
-    
+    } 
 }
 @media (max-width: 768px) {
 // ----------navbar----------    
@@ -88,12 +87,6 @@
             & p {
                 margin-bottom: 0;
                 text-align: center;
-            }
-            &-legal { 
-                & a,& small {
-                color: $primary--font-color;
-                text-decoration: none;
-                }  
             }
         }
     }

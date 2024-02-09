@@ -28,12 +28,15 @@
     width: 100%;
     height: 100%;
 }  
-.c1, .c2, .c3, .c4, .c5, .c6 {
-    padding: 15px;
+
+.box-pages {
     background-color: $secondary--bg-color;
-}
-.box-pages:hover {
+    padding: 15px;
+    box-shadow: 5px 5px 5px;
+    transition: 0.8s;
+    &:hover {
     background-color: $tertiary--bg-color;
+    }
 }
 /* --------------------pages-grid------------------- */
 .menu-index {
@@ -124,22 +127,22 @@
     }
     /* -------------------pages------------------ */
     .menu-men {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(6, 9fr);
-            gap: 20px;
-            width: 80%;
-            background-color: $primary--bg-color;
-            grid-template-areas: 
-            'a1 a1 a2 a2'
-            'a1 a1 a2 a2'
-            'a1 a1 a2 a2'
-            'a3 a3 a4 a4'
-            'a3 a3 a4 a4'
-            'a3 a3 a4 a4'
-            'a5 a5 a6 a6'
-            'a5 a5 a6 a6'
-            'a5 a5 a6 a6';
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 9fr);
+        gap: 20px;
+        width: 80%;
+        background-color: $primary--bg-color;
+        grid-template-areas: 
+        'a1 a1 a2 a2'
+        'a1 a1 a2 a2'
+        'a1 a1 a2 a2'
+        'a3 a3 a4 a4'
+        'a3 a3 a4 a4'
+        'a3 a3 a4 a4'
+        'a5 a5 a6 a6'
+        'a5 a5 a6 a6'
+        'a5 a5 a6 a6';
         }
     .box-contain {
         padding: 30px ;

@@ -132,6 +132,7 @@ body {
   height: auto;
   border: 5px groove #bc9e84;
   padding: 2px 20px;
+  box-shadow: 3px 3px;
 }
 
 .footer-container {
@@ -141,6 +142,17 @@ body {
   border-top: 3px groove #b0845e;
   margin-top: 30px;
   justify-content: space-between;
+}
+.footer-container-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.footer-container-content-legal a, .footer-container-content-legal small {
+  color: black;
+  text-decoration: none;
 }
 
 /* -----------layouts------------ */
@@ -225,10 +237,6 @@ body {
   .footer-container-content p {
     margin-bottom: 0;
     text-align: center;
-  }
-  .footer-container-content-legal a, .footer-container-content-legal small {
-    color: black;
-    text-decoration: none;
   }
 }
 /* ---------------------about------------------ */
@@ -479,11 +487,12 @@ body {
   height: 100%;
 }
 
-.c1, .c2, .c3, .c4, .c5, .c6 {
-  padding: 15px;
+.box-pages {
   background-color: #bc9e84;
+  padding: 15px;
+  box-shadow: 5px 5px 5px;
+  transition: 0.8s;
 }
-
 .box-pages:hover {
   background-color: #b0845e;
 }
@@ -607,15 +616,14 @@ body {
 .welcome-container-contain {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   background-color: #d7cec7;
   width: 65vw;
   height: auto;
-  justify-content: center;
-  align-content: center;
+  justify-items: center;
+  align-items: center;
   text-align: center;
   padding-right: 40px;
-  margin-bottom: 40px;
+  margin-top: 30px;
 }
 .welcome-container-contain-info {
   padding: 30px;
@@ -652,10 +660,6 @@ body {
   align-self: center;
   border: 5px groove #bc9e84;
   padding: 2px 20px;
-}
-
-h3 {
-  color: aqua;
 }
 
 /*# sourceMappingURL=style.css.map */
