@@ -8,6 +8,7 @@
 @import "components/tittle";
 @import "components/footer";
 /* -----------layouts------------ */
+@import "layouts/colors";
 @import "layouts/mediaqueries";
 @import "layouts/flex";
 @import "layouts/grid";
@@ -52,15 +53,12 @@
 .contact-form {
     display: flex;
     flex-direction: column;
-    background-color: #b0845e;
     width: 60%;
     height: auto;
-    border: 3px groove #bc9e84;
     padding: 20px;
     & h2 {
         display: flex;
         align-self: center;
-        border: 5px groove #bc9e84;
         padding: 2px 20px;
     }
 }

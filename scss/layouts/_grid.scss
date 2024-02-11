@@ -17,38 +17,34 @@
 .b6, .c6 {
     grid-area: a6;
 }
+.c7 {
+    grid-area: a7;
+}
 .b1, .b3, .b5{
     display: flex;
     flex-direction: column;
     padding: 15px;
     justify-content: center;
     align-items: center;
-    background-color: $primary--bg-color;
-    color: $primary--font-color;
     width: 100%;
     height: 100%;
 }  
 
 .box-pages {
-    background-color: $secondary--bg-color;
     padding: 15px;
     box-shadow: 5px 5px 5px;
     transition: 0.8s;
-    &:hover {
-    background-color: $tertiary--bg-color;
-    }
 }
+
 /* --------------------pages-grid------------------- */
-.menu-index {
+.menu-index, .menu-men {
     padding-bottom: 60px;
 }    
-.menu-men-container {
-    padding: 50px 0 50px;
-}
 .menu-men-container {
         display: flex;
         width: 100%;
         justify-content: center;
+        padding: 50px 0 50px;
 }
 .box-img {
         display: flex;
@@ -63,11 +59,12 @@
         width: auto;
         height: auto;
         align-items: center;
-}    
-.box-contain p {
         text-align: justify;
-        padding: 10px;
         font-size: 18px;
+}
+.sidebar-container {
+    gap: 20px;
+    padding: 40px;
 }
 /* ----------------------media query desktop--------------------- */
 @media (min-width: 1024px) {
@@ -76,7 +73,6 @@
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(6, 1fr);
-        background-color: $primary--bg-color;
         overflow: hidden;
         grid-template-areas: 
         'a1 a1 a2 a2 a3 a3'
@@ -89,18 +85,26 @@
 /* -----------------pages------------------- */
     .menu-men {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(6, 1fr);
         gap: 20px;
-        width: 80%;
-        background-color: $primary--bg-color;
+        width: 90%;
         grid-template-areas: 
-        'a1 a1 a2 a2 a3 a3'
-        'a1 a1 a2 a2 a3 a3'
-        'a1 a1 a2 a2 a3 a3'
-        'a4 a4 a5 a5 a6 a6'
-        'a4 a4 a5 a5 a6 a6'
-        'a4 a4 a5 a5 a6 a6';
+        'a7 a7 a1 a1 a2 a2 a3 a3'
+        'a7 a7 a1 a1 a2 a2 a3 a3'
+        'a7 a7 a1 a1 a2 a2 a3 a3'
+        'a7 a7 a4 a4 a5 a5 a6 a6'
+        'a7 a7 a4 a4 a5 a5 a6 a6'
+        'a7 a7 a4 a4 a5 a5 a6 a6';
+        .sidebar-container {
+            width: 100%;
+            height: 400px;
+            align-items: center;
+            padding-right: 40px;
+            & ul li {
+                    list-style:none;
+                }
+        }
     }
     .box-contain {
         padding: 20px ;
@@ -113,7 +117,6 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(9, 1fr);
-        background-color: $primary--bg-color;
         grid-template-areas: 
         'a1 a1 a2 a2'
         'a1 a1 a2 a2'
@@ -129,11 +132,11 @@
     .menu-men {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(6, 9fr);
+        grid-template-rows: repeat(10, 1fr);
         gap: 20px;
         width: 80%;
-        background-color: $primary--bg-color;
-        grid-template-areas: 
+        grid-template-areas:
+        'a7 a7 a7 a7' 
         'a1 a1 a2 a2'
         'a1 a1 a2 a2'
         'a1 a1 a2 a2'
@@ -143,6 +146,15 @@
         'a5 a5 a6 a6'
         'a5 a5 a6 a6'
         'a5 a5 a6 a6';
+        .sidebar-container {
+            width: 100%;
+            height: 300px;
+            align-items: center;
+            padding-right: 40px;
+            & ul li {
+                    list-style:none;
+                }
+        }
         }
     .box-contain {
         padding: 30px ;
@@ -155,7 +167,6 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(9, auto);
-        background-color: $primary--bg-color;
         grid-template-areas: 
         'a2'
         'a2'
@@ -171,11 +182,11 @@
     .menu-men {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(12, 9fr);
+        grid-template-rows: repeat(13, 9fr);
         gap: 20px;
         width: 100%;
-        background-color: $primary--bg-color;
         grid-template-areas: 
+        'a7 a7'
         'a1 a1'
         'a1 a1'
         'a1 a1'
@@ -194,6 +205,14 @@
         'a6 a6'
         'a6 a6'
         'a6 a6';
+        .sidebar-container {
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            & ul li {
+                    list-style:none;
+                }
+        }
     }
     .box-contain {
         padding: 40px ;

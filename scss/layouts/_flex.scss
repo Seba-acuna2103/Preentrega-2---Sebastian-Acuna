@@ -1,6 +1,5 @@
 /* ---------------------about------------------ */
-.about-container,
-.vision-container {
+.local-container {
     display: flex;
     width: 80%;
     height: auto;
@@ -8,10 +7,6 @@
     background-color:$tertiary--bg-color;
     margin-bottom: 20px;
     padding: 10px;
-}
-.vision-container
- .local-content {
-    padding: 25px 25px 0;
 }
 .about-img {
     display: flex;
@@ -63,37 +58,30 @@
     flex-direction: row;
     width: 80%;
     height: auto;
-    background-color:$secondary--bg-color;
+    background-color:$tertiary--bg-color;
     margin-bottom: 20px;
     padding: 10px;
-}
-.local-container:hover {
-    background-color: $tertiary--bg-color;
-}
-.local-content h2 {
-    border: 5px groove $secondary--bg-color;
-    padding: 2px 20px;
 }
 @media (min-width: 1024px) {
 .local-container {
     align-items: center;
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        font-size: 20px;
+        width: 50%;
+        height: 100%;
+        padding: 30px;
+        & p {
+            padding-top: 30px;
+        }
+    }
 }
-.local-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-    font-size: 20px;
-    width: 50%;
-    height: 100%;
-    padding: 30px;
-}
-.local-content p {
-    padding-top: 30px;
-}
-.local-map,
-.local-img {
+.local-container-map,
+.local-container-img {
     display: flex;
     width: 50%;
     height: 100%;
@@ -101,12 +89,7 @@
     padding: 10px 0 10px 0;
     overflow: hidden;
 }
-.local-img {
-    width: 50%;
-    height: 100%;
-    padding: 10px 0 10px;
-}
-.local-map iframe {
+.local-container-map iframe {
     display: flex;
     width: 500px;
     height: 400px;
@@ -121,22 +104,21 @@
 @media (min-width: 769px) and (max-width: 1023px) {
 .local-container {
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        font-size: 20px;
+        text-align: center;
+        width: 80%;
+        height: 50%;
+        padding: 15px;
+    }
 }
-.local-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    font-size: 20px;
-    text-align: center;
-    width: 80%;
-    height: 50%;
-    padding: 15px;
-}
-.local-map {
+.local-container-map {
     display: flex;
     width: 100%;
     height: 100%;
@@ -145,12 +127,12 @@
     overflow: hidden;
     padding-bottom: 30px;
 }
-.local-img {
+.local-container-img {
     width: 80%;
     height: 50%;
     padding: 20px 0 10px;
 }
-.local-map iframe {
+.local-container-map iframe {
     display: flex;
     width: 500px;
     height: 400px;
@@ -168,19 +150,19 @@
         flex-wrap: wrap;
         align-items: center;
         width: 100%;
+        &-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            font-size: 16px;
+            text-align: center;
+            width: 100%;
+            height: 50%;
+            padding: 15px 15px 2px;
+        }
     }
-    .local-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-items: center;
-        font-size: 16px;
-        text-align: center;
-        width: 100%;
-        height: 50%;
-        padding: 15px 15px 2px;
-    }
-    .local-map {
+    .local-container-map {
         display: flex;
         width: 100%;
         height: 100%;
@@ -189,12 +171,12 @@
         overflow: hidden;
         padding-bottom: 30px;
     }
-    .local-img {
+    .local-container-img {
         width: 100%;
         height: 50%;
         padding-bottom: 10px;
     }
-    .local-map iframe {
+    .local-container-map iframe {
         display: flex;
         width: 400px;
         height: 300px;

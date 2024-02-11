@@ -7,8 +7,10 @@
     & h1 {
         display: flex;
         height: auto;
-        border: 5px groove $secondary--bg-color;
         padding: 2px 20px;
         box-shadow: 3px 3px;
     }
+}
+.local-content h2 {
+    padding: 2px 20px;
 }
