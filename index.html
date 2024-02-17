@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,16 +65,23 @@
             </section>
         </nav>
     </header>
+<!-- ---------------------------------main-------------------------------- -->
     <main>          
 <!-- --------------------------------welcome------------------------------ -->      
         <section class="welcome-container">
-            <article class="welcome-container-img">
-            <img src="assets/images/index/logo.jpg" alt="logo de la compañía">
+            <article class="welcome-container-carousel d1">
+                <div class="welcome-container-carousel-slide">
+                    <h1>¡Bienvenidos a Betty's Clothes!</h1>
+                </div>
             </article>
-            <article class="welcome-container-contain">
-                <div class="welcome-container-contain-info">
-                <h1>¡Bienvenida a Betty's Clothes!</h1>
-                <p>Somos la empresa líder en diseño y alquiler o venta de vestuario en Argentina. Contamos con una ámplia variedad de productos y una larga trayectoria para garantizarte llevar a la realidad tu visión creativa.</p>
+            <article class="welcome-container-carousel-1 d2">
+                <div class="welcome-container-carousel-1-slide">
+                    <p>Somos la empresa de diseño de vestuario líder en Argentina, grantizandote hacer realidad tu visión creativa. ¡Suscribite a nuestro Newsletter para recibir todas las novedades en tu correo!</p>
+                </div>
+            </article>
+            <article class="welcome-container-register d3">
+                <div class="welcome-container-register-slide">
+                    <a href="#register">Registrarse</a>
                 </div>
             </article>
         </section>   
@@ -93,13 +100,13 @@
                         <button type="button" data-bs-target="#index-women-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <div class="carousel-item active carousel-index-item">
                             <img src="assets/images/pages/women/women-img-1.jpg" class="d-block w-100" alt="chica con anteojos negros,gorro gris, camisa a cuadros roja sobre una remera blanca y pantalón de jean">
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item carousel-index-item">
                             <img src="assets/images/pages/women/women-img-2.jpg" class="d-block w-100" alt="chica con anteojos con forma de corazón y campera de jean sobre casual pero elegante vestido amarillo">
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item carousel-index-item">
                             <img src="assets/images/pages/women/women-img-3.jpg" class="d-block w-100" alt="chica con lindo sombrero de mimbre, musculosa blanca y pantalón color arena">
                         </div>
                     </div>
@@ -126,13 +133,13 @@
                         <button type="button" data-bs-target="#index-men-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <div class="carousel-item active carousel-index-item">
                             <img src="assets/images/pages/men/men-img-1.jpg" class="d-block w-100" alt="hombre con anteojos de sol, saco negro sport y remera beige">
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item carousel-index-item">
                             <img src="assets/images/pages/men/men-img-4.jpg" class="d-block w-100" alt="hombre con camisa a cuadros azul sobre remera blanca y bermuda azul claro">
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item carousel-index-item">
                             <img src="assets/images/pages/men/men-img-3.jpg" class="d-block w-100" alt="hombre con campera de cuero sobre remera blanca y jeans negros">
                         </div>
                     </div>
@@ -159,13 +166,13 @@
                         <button type="button" data-bs-target="#index-kids-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <div class="carousel-item active carousel-index-item">
                             <img src="assets/images/pages/kids/kids-img-1.jpg" class="d-block w-100" alt="niña con conjunto de jean azul claro y remera blanca">
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item carousel-index-item">
                             <img src="assets/images/pages/kids/kids-img-4.jpg" class="d-block w-100" alt="niño con gorro negro, buzo violeta claro y pantalones grises">
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item carousel-index-item">
                             <img src="assets/images/pages/kids/kids-img-6.jpg" class="d-block w-100" alt="niño con conjunto de jean, remera blanca y zapatillas blancas">
                         </div>
                     </div>
@@ -181,9 +188,11 @@
             </article>
         </section>  
 <!-- ------------------------------register-form-------------------------- -->
-<section class="contact-container" id="contac">
+<section class="contact-container" id="register">
     <div class="contact-form">
-        <h2>Registro</h2>
+        <article class="contact-form-contain">
+            <p>¡Suscribite a nuestro Newsletter!</p>
+        </article>
         <article class="mb-3">
             <label for="exampleFormControlInput2" class="form-label">Nombre</label>
             <input type="name" class="form-control" id="exampleFormControlInput2" placeholder="Introduzca su nombre">

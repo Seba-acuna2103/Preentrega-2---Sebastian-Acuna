@@ -14,6 +14,14 @@ realizar un boton de modo "dia/noche"--- */
         background-color: $secondary--bg-color;
         border-bottom:3px solid $tertiary--bg-color;
     }
+// ---------- buttons-------------
+.button-container{
+    & .send-button {
+        color: white;
+        border: 4px solid $tertiary--bg-color;
+        background: linear-gradient(45deg, #1c1510ce, #896442b9); 
+    }
+} 
 // ------------grids--------------
     .menu-index, .menu-men {
         background-color: $primary--bg-color;
@@ -21,15 +29,29 @@ realizar un boton de modo "dia/noche"--- */
     .box {
         background-color: $primary--bg-color;
     }
-    .box-pages {
+    .box-pages, .sidebar-container {
         background-color: $secondary--bg-color;
         &:hover {
             background-color: $tertiary--bg-color;
+            & .box-contain { 
+                & .button-container {
+                    & .send-button {
+                    border: 4px solid $quaternary--bg-color;
+                    color: white;
+                    transition: 1s;
+                    }
+                }
+            }
         }
-    }
+        
+    }  
+// ------------tittles------------
     .h1-container h1, h2, .contact-form h2 {
-            border: 5px groove $tertiary--bg-color;
-            padding: 4px 10px;
+        border: 4px solid $quaternary--bg-color;
+        color: white;
+        border-radius: 7px;
+        background: linear-gradient(45deg, #1c1510ce, #896442b9);
+        padding: 10px 50px;
     }
 // -------------forms-------------
     .contact-form {
@@ -90,9 +112,9 @@ realizar un boton de modo "dia/noche"--- */
         .mb-3 {
             & .button-container {
                 background-color: $secondary--bg-color-dark;
-                & .send-button {
-                    background-color: $quaternary--bg-color;
-                }
+                // & .send-button {
+                //     background-color: $quaternary--bg-color;
+                // }
             }
         }
     }

@@ -5,14 +5,38 @@
     height: 100%;
 
     &-brand {
-        display: flex;
+        @extend .flexible;
         width: 10%;
-        justify-content: center;
         &-icon {
             width: 60px;
             height: 100%;
             object-fit: contain;
         }    
+    }
+    &-collapse {
+        justify-content: center;
+        width: 75%;
+        & .navbar-nav {
+            padding-left: 35px;
+            & .nav-item {
+                & .dropdown-menu {
+                    background-color: $primary--bg-color;
+                    & .dropdown-item {
+                        &:hover {
+                            background-color: $tertiary--bg-color;
+                            border-radius: 4px;
+                        }
+                        .nav-link {
+                            font-size: 20px;
+                        }
+                    }
+                }
+                & .nav-link:hover {
+                    background-color: $tertiary--bg-color;
+                    border-radius: 4px;
+                }
+            }
+        }
     }
     &-socialmedia {
         display: flex;
@@ -20,11 +44,9 @@
         width: 15%;
         justify-content: space-evenly;
         &-container {
-            display: flex;
+            @extend .flexible;
             width: 30px;
             height: 30px;
-            align-items: center;
-            justify-content: center;
             &:hover {
                 background-color: $tertiary--bg-color;
                 border-radius: 4px;
@@ -34,20 +56,4 @@
             }
         }
     }
-}
-
-.dropdown-menu {
-    background-color: $primary--bg-color;
-}
-.dropdown-item:hover,
-.nav-link:hover {
-    background-color: $tertiary--bg-color;
-    border-radius: 4px;
-}
-.nav-link {
-    font-size: 20px;
-}
-.navbar-collapse {
-    justify-content: center;
-    width: 75%
 }

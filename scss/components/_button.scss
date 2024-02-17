@@ -1,14 +1,15 @@
-.mb-3 {
-    & .button-container {
-        display: flex;
-        width: 100%;
-        height: auto;
-        justify-content: center;
-        & .send-button {
-            display: flex;
-            width: 100px;
-            height: 30px;
-            justify-content: center;
-        }
+.button-container {
+    @extend .flexible; 
+    width: 100%;
+    height: auto;
+    & .send-button {
+        @extend .flexible;
+        width: 170px;
+        height: 50px;
+        padding: 10px;
+        border-radius: 7px;
+            
+        font-size: 20px;
+        transition: 0.5s;
     }
 }

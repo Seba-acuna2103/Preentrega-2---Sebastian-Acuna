@@ -39,7 +39,6 @@
     }
 // ---------welcome----------
     .welcome-container {
-        flex-wrap: wrap;
         background-color: $primary--bg-color;
         justify-content: center;
         &-contain {
@@ -51,9 +50,6 @@
                 }
             }
         }    
-        .welcome-img img {
-            width: 70vw;
-        }
     }
 // --------formulario--------
     .contact-container {
@@ -64,8 +60,11 @@
         height: 580px;
         & .contact-form {
             width: 100%;
-            & input,& textarea {
-                background-color: $primary--bg-color;
+            & .mb-3 {
+                width: 320px;
+                & input,& textarea {
+                    background-color: $primary--bg-color;
+                }
             }
         }
     }
