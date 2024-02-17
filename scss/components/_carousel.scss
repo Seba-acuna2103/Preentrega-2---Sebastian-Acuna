@@ -1,41 +1,32 @@
 /* -------------------carouseles------------------ */
-.carousel-item img {
-    width: 100%;
-    object-fit: cover; 
+.carousel-index-item img,
+.carousel-page-item img {
+    @extend .carousels 
 } 
 
 @media (max-width: 768px) {
     .carousel-index-item img {
-        width: 100%;
         height: 300px;
         object-fit: contain;
     }.carousel-page-item img {
         width: 100%;
         height: 300px;
-        object-fit: cover;
     }
 }
 @media (min-width: 769px) and (max-width: 1023px) {
     .carousel-index-item img {
-        width: 100%;
         height: 450px;
-        object-fit: cover;
+        object-fit: contain;
     }
     .carousel-page-item img {
-        width: 100%;
         height: 450px;
-        object-fit: cover;
     }
 }
 @media (min-width: 1024px) {
      .carousel-index-item img {
-        width: 100%;
         height: 600px;
-        object-fit: cover;
     }
     .carousel-page-item img {
-        width: 100%;
         height: 600px;
-        object-fit: cover;
     }
 }

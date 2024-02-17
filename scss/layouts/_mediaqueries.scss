@@ -1,10 +1,11 @@
+    .contact-container,
+    .footer-container {
+        @include flexible;
+        width: 100%;
+    }
 @media (min-width: 1024px) {
 // --------formulario--------
     .contact-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
         height: 590px;
         & .contact-form {
             & input,& textarea {
@@ -16,10 +17,6 @@
 @media (min-width: 769px) and (max-width: 1023px) {
 // --------formulario--------
     .contact-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
         height: 600px;
         & .contact-form {
             & input,& textarea{
@@ -39,8 +36,8 @@
     }
 // ---------welcome----------
     .welcome-container {
+        @include flexible;
         background-color: $primary--bg-color;
-        justify-content: center;
         &-contain {
             width: 100vw;
             &-info {
@@ -53,10 +50,6 @@
     }
 // --------formulario--------
     .contact-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
         height: 580px;
         & .contact-form {
             width: 100%;
@@ -71,7 +64,6 @@
 // ----------footer----------
     .footer-container {
         flex-direction: column;
-        align-items: center;
         &-logo {
             padding: 15px;
         }

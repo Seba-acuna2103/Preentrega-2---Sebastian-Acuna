@@ -4,3 +4,15 @@
     align-items: center;
     justify-content: center;
 }
+
+.carousels {
+    width: 100%;
+    object-fit: cover;
+}
+// --------------mixins----------------
+
+@mixin flexible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

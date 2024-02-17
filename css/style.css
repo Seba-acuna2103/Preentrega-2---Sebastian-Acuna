@@ -14,10 +14,16 @@ p {
   font-weight: bold;
 }
 
-.flexible, .contact-form-contain, .contact-form, .box-contain, .box-img, .menu-men-container, .b1, .b3, .b5, .footer-container-content, .h1-container h1, .h1-container, .button-container .send-button, .button-container, .navbar-socialmedia-container, .navbar-brand {
+.flexible, .contact-form-contain, .contact-form, .welcome-container-register-slide, .welcome-container-carousel-slide h1, .welcome-container-carousel-1-slide h1, .welcome-container-carousel, .welcome-container-carousel-1, .box-contain, .box-img, .menu-men-container, .b1, .b3, .b5, .local, .local-container-img .about-img, .local-container, .footer-container-content, .h1-container h1, .h1-container, .button-container .send-button, .button-container, .navbar-socialmedia-container, .navbar-brand {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.carousels, .carousel-index-item img,
+.carousel-page-item img {
+  width: 100%;
+  object-fit: cover;
 }
 
 /* ----------components---------- */
@@ -75,45 +81,31 @@ p {
 }
 
 /* -------------------carouseles------------------ */
-.carousel-item img {
-  width: 100%;
-  object-fit: cover;
-}
-
 @media (max-width: 768px) {
   .carousel-index-item img {
-    width: 100%;
     height: 300px;
     object-fit: contain;
   }
   .carousel-page-item img {
     width: 100%;
     height: 300px;
-    object-fit: cover;
   }
 }
 @media (min-width: 769px) and (max-width: 1023px) {
   .carousel-index-item img {
-    width: 100%;
     height: 450px;
-    object-fit: cover;
+    object-fit: contain;
   }
   .carousel-page-item img {
-    width: 100%;
     height: 450px;
-    object-fit: cover;
   }
 }
 @media (min-width: 1024px) {
   .carousel-index-item img {
-    width: 100%;
     height: 600px;
-    object-fit: cover;
   }
   .carousel-page-item img {
-    width: 100%;
     height: 600px;
-    object-fit: cover;
   }
 }
 .button-container {
@@ -237,12 +229,16 @@ p, a, li, h1, h2 {
   color: #000000;
 }
 
+.contact-container,
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 @media (min-width: 1024px) {
   .contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     height: 590px;
   }
   .contact-container .contact-form input, .contact-container .contact-form textarea {
@@ -251,10 +247,6 @@ p, a, li, h1, h2 {
 }
 @media (min-width: 769px) and (max-width: 1023px) {
   .contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     height: 600px;
   }
   .contact-container .contact-form input, .contact-container .contact-form textarea {
@@ -270,8 +262,10 @@ p, a, li, h1, h2 {
     display: none;
   }
   .welcome-container {
-    background-color: #d7cec7;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    background-color: #d7cec7;
   }
   .welcome-container-contain {
     width: 100vw;
@@ -283,10 +277,6 @@ p, a, li, h1, h2 {
     font-size: 18px;
   }
   .contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     height: 580px;
   }
   .contact-container .contact-form {
@@ -300,7 +290,6 @@ p, a, li, h1, h2 {
   }
   .footer-container {
     flex-direction: column;
-    align-items: center;
   }
   .footer-container-logo {
     padding: 15px;
@@ -321,63 +310,46 @@ p, a, li, h1, h2 {
 }
 /* ---------------------about------------------ */
 .local-container {
-  display: flex;
   width: 80%;
   height: auto;
-  align-items: center;
   background-color: #b0845e;
   margin-bottom: 20px;
   padding: 10px;
 }
-
-.about-img {
-  display: flex;
+.local-container-img .about-img {
   width: 100%;
   height: 400px;
   object-fit: contain;
 }
 
 @media (min-width: 1023px) {
-  .about-container,
-  .vision-container {
+  .local-container-content {
     flex-direction: row;
   }
 }
 @media (min-width: 769px) and (max-width: 1023px) {
-  .about-container {
+  .local-container-content {
     flex-direction: column;
   }
-  .vision-container {
-    flex-direction: column-reverse;
-  }
-  .about-img {
+  .local-container-img {
     height: 300px;
   }
 }
 @media (max-width: 768px) {
-  .about-container,
-  .vision-container {
+  .local-container {
     width: 100%;
-  }
-  .about-container {
     flex-direction: column;
   }
-  .vision-container {
-    flex-direction: column-reverse;
-  }
-  .about-img {
+  .local-container-img {
     height: 300px;
   }
 }
 /* --------------------locales----------------- */
 .local {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   padding-top: 30px;
 }
-
-.local-container {
+.local.local-container {
   display: flex;
   flex-direction: row;
   width: 80%;
@@ -393,9 +365,9 @@ p, a, li, h1, h2 {
   }
   .local-container-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
     font-size: 20px;
     width: 50%;
@@ -405,12 +377,12 @@ p, a, li, h1, h2 {
   .local-container-content p {
     padding-top: 30px;
   }
-  .local-container-map,
-  .local-container-img {
+  .local-container-map, .local-container-img {
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50%;
     height: 100%;
-    justify-content: center;
     padding: 10px 0 10px 0;
     overflow: hidden;
   }
@@ -427,15 +399,16 @@ p, a, li, h1, h2 {
 }
 @media (min-width: 769px) and (max-width: 1023px) {
   .local-container {
-    flex-direction: column;
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
   }
   .local-container-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
     font-size: 20px;
     text-align: center;
     width: 80%;
@@ -444,22 +417,23 @@ p, a, li, h1, h2 {
   }
   .local-container-map {
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    justify-content: center;
     padding: 10px 0 10px 0;
     overflow: hidden;
     padding-bottom: 30px;
-  }
-  .local-container-img {
-    width: 80%;
-    height: 50%;
-    padding: 20px 0 10px;
   }
   .local-container-map iframe {
     display: flex;
     width: 500px;
     height: 400px;
+  }
+  .local-container-img {
+    width: 80%;
+    height: 50%;
+    padding: 20px 0 10px;
   }
   .carousel-item .carousel-local-img {
     width: 500px;
@@ -469,16 +443,17 @@ p, a, li, h1, h2 {
 }
 @media (max-width: 768px) {
   .local-container {
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 100%;
   }
   .local-container-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
     font-size: 16px;
     text-align: center;
     width: 100%;
@@ -487,22 +462,25 @@ p, a, li, h1, h2 {
   }
   .local-container-map {
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    justify-content: center;
     padding: 10px 0 10px 0;
     overflow: hidden;
     padding-bottom: 30px;
+  }
+  .local-container-map iframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 300px;
   }
   .local-container-img {
     width: 100%;
     height: 50%;
     padding-bottom: 10px;
-  }
-  .local-container-map iframe {
-    display: flex;
-    width: 400px;
-    height: 300px;
   }
   .carousel-item .carousel-local-img {
     width: 400px;
@@ -604,12 +582,9 @@ p, a, li, h1, h2 {
   grid-template-areas: "a2 a2 a1 a1" "a2 a2 a1 a1" "a2 a2 a3 a3";
 }
 .welcome-container-carousel, .welcome-container-carousel-1 {
-  display: flex;
   flex-direction: column;
   position: absolute;
   overflow: hidden;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
 }
@@ -626,11 +601,8 @@ p, a, li, h1, h2 {
   animation: carousel 30s infinite linear;
 }
 .welcome-container-carousel-slide h1, .welcome-container-carousel-1-slide h1 {
-  display: flex;
   width: 100%;
   height: 120px;
-  align-items: center;
-  justify-content: center;
   font-size: 48px;
 }
 .welcome-container-carousel-1-slide, .welcome-container-carousel-1-1-slide {
@@ -650,11 +622,8 @@ p, a, li, h1, h2 {
   padding-bottom: 30px;
 }
 .welcome-container-register-slide {
-  display: flex;
   width: 170px;
   height: 50px;
-  align-items: center;
-  justify-content: center;
   padding: 10px;
   border: 4px solid #b0845e;
   border-radius: 7px;
