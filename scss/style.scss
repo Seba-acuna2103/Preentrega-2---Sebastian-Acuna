@@ -13,23 +13,4 @@
 @import "layouts/mediaqueries";
 @import "layouts/flex";
 @import "layouts/grid";
-/* -------------------formulario--------------- */
-.contact-form {
-    @extend .flexible;
-    flex-direction: column;
-    width: 60%;
-    height: auto;
-    padding: 20px;
-    & .mb-3 {
-        width: 400px;
-    }
-    & h2 {
-        display: flex;
-        align-self: center;
-        padding: 2px 20px;
-    }
-    &-contain {
-        @extend .flexible;
-        font-size: 22px;
-    }
-}
+
