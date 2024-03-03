@@ -578,21 +578,22 @@ h2, .contact-form h2 {
 .box-contain {
   flex-direction: column;
   width: auto;
-  height: 330px;
+  height: 240px;
   justify-content: space-between;
   text-align: left;
-  font-size: 18px;
+  font-size: 15px;
 }
 .box-contain ul li {
   list-style: circle;
 }
 
 .sidebar-container {
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 20px;
   padding: 40px;
   box-shadow: 5px 5px 5px;
   transition: 1s;
+  font-size: 18px;
 }
 .sidebar-container ul .dropdown .dropdown-menu {
   background-color: #d7cec7;
@@ -739,9 +740,14 @@ h2, .contact-form h2 {
 }
 
 /* --------------------media query desktop------------------- */
-@media (min-width: 1024px) {
+@media (min-width: 1100px) {
   .box-img-container {
-    height: 305px;
+    height: 400px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1099px) {
+  .box-img-container {
+    height: 350px;
   }
 }
 /* ---------------------media query tablet------------------- */
@@ -786,6 +792,7 @@ h2, .contact-form h2 {
     height: 300px;
     align-items: center;
     padding-right: 40px;
+    font-size: 18px;
   }
   .menu-men-container .menu-men .sidebar-container ul li {
     list-style: none;
@@ -799,6 +806,7 @@ h2, .contact-form h2 {
   .menu-men-container .menu-men .box-pages .box-contain {
     height: 260px;
     padding: 30px 30px 0;
+    font-size: 18px;
   }
 }
 /* -------------------media query mobile-------------------- */
@@ -849,6 +857,7 @@ h2, .contact-form h2 {
     width: 100%;
     height: 300px;
     align-items: center;
+    font-size: 18px;
   }
   .menu-men .sidebar-container ul li {
     list-style: none;
@@ -856,6 +865,7 @@ h2, .contact-form h2 {
   .box-contain {
     height: auto;
     padding: 40px;
+    font-size: 18px;
   }
 }
 
