@@ -163,8 +163,6 @@ h2, .contact-form h2 {
 }
 
 /* -----------layouts------------ */
-/* ---almaceno todos los colores en un scss para eventualmente 
-realizar un boton de modo "dia/noche"--- */
 body {
   background-color: #d7cec7;
 }

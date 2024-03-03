@@ -1,7 +1,4 @@
-/* ---almaceno todos los colores en un scss para eventualmente 
-realizar un boton de modo "dia/noche"--- */
-@if $screen-mode == light {
-  
+
     body {
         background-color: $primary--bg-color;
     }
@@ -79,54 +76,3 @@ realizar un boton de modo "dia/noche"--- */
             }
         }
     } 
-}
-@else {
-    body {
-        background-color: $primary--bg-color-dark;
-    }
-// ------------font---------------
-    p, a, li, h1, h2{
-        color: $primary--font-color-dark;
-    }
-// ------------navbar-------------
-    .navbar {
-        background-color: $secondary--bg-color-dark;
-        border-bottom:3px solid $tertiary--bg-color;
-    }
-// ------------grids--------------
-    .menu-index, .menu-men {
-        background-color: $primary--bg-color-dark;
-    }
-    .box {
-        background-color: $primary--bg-color-dark;
-    }
-    .box-pages {
-        background-color: $secondary--bg-color-dark;
-        &:hover {
-            background-color: $tertiary--bg-color-dark;
-        }
-    }
-    .h1-container h1, h2, .contact-form h2 {
-            border: 5px groove $tertiary--bg-color;
-            padding: 4px 10px;
-    }
-// -------------forms-------------
-    .contact-form {
-        background-color: $secondary--bg-color-dark;
-        .mb-3 {
-            & .button-container {
-                background-color: $secondary--bg-color-dark;
-            }
-        }
-    }
-// ------------footer-------------
-    .footer-container {
-        background-color: $secondary--bg-color-dark;
-        border-top: 3px solid $tertiary--bg-color;
-        &-content-legal{ 
-            & a,& small {
-            color: $primary--font-color-dark;
-            }
-        }
-    } 
-}
