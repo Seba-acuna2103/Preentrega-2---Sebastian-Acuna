@@ -47,11 +47,15 @@ realizar un boton de modo "dia/noche"--- */
     }  
 // ------------tittles------------
     .h1-container h1, h2, .contact-form h2 {
-        border: 4px solid $quaternary--bg-color;
         color: white;
-        border-radius: 7px;
         background: linear-gradient(45deg, #1c1510ce, #896442b9);
-        padding: 10px 50px;
+    }
+    h2, .contact-form h2 {
+        border: 4px solid $quaternary--bg-color;
+    }
+    .h1-container h1 {
+        border-top: 4px solid $quaternary--bg-color;
+        border-bottom: 4px solid $quaternary--bg-color;
     }
 // -------------forms-------------
     .contact-form {
@@ -112,9 +116,6 @@ realizar un boton de modo "dia/noche"--- */
         .mb-3 {
             & .button-container {
                 background-color: $secondary--bg-color-dark;
-                // & .send-button {
-                //     background-color: $quaternary--bg-color;
-                // }
             }
         }
     }

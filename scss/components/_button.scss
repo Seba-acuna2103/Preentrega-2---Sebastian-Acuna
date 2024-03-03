@@ -1,7 +1,7 @@
 .button-container {
     @extend .flexible; 
     width: 100%;
-    height: auto;
+    height: 60px;
     & .send-button {
         @extend .flexible;
         width: 170px;

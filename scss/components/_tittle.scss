@@ -1,3 +1,9 @@
+.h1-container h1, h2, .contact-form h2 {
+    padding: 10px 50px;
+}
+h2 , .contact-form h2 {
+    border-radius: 7px;
+}
 .h1-container {
     @extend .flexible;
     width: 100%;
@@ -5,16 +11,9 @@
     & h1 {
         @extend .flexible;
         height: auto;
+        width: 100%;
     }
 }
-.h1-container h1, h2, .contact-form h2 {
-    border: 4px solid $quaternary--bg-color;
-    color: white;
-    border-radius: 7px;
-    background: linear-gradient(45deg, #1c1510ce, #896442b9);
-    padding: 10px 50px;
-}
-
 .local-container-content h2 {
     margin-bottom: 30px;
 }

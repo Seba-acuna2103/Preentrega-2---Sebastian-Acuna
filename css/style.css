@@ -110,7 +110,7 @@ p {
 }
 .button-container {
   width: 100%;
-  height: auto;
+  height: 60px;
 }
 .button-container .send-button {
   width: 170px;
@@ -121,20 +121,21 @@ p {
   transition: 0.5s;
 }
 
+.h1-container h1, h2, .contact-form h2 {
+  padding: 10px 50px;
+}
+
+h2, .contact-form h2 {
+  border-radius: 7px;
+}
+
 .h1-container {
   width: 100%;
   height: 150px;
 }
 .h1-container h1 {
   height: auto;
-}
-
-.h1-container h1, h2, .contact-form h2 {
-  border: 4px solid #5c3d23;
-  color: white;
-  border-radius: 7px;
-  background: linear-gradient(45deg, rgba(28, 21, 16, 0.8078431373), rgba(137, 100, 66, 0.7254901961));
-  padding: 10px 50px;
+  width: 100%;
 }
 
 .local-container-content h2 {
@@ -204,11 +205,17 @@ p, a, li, h1, h2 {
 }
 
 .h1-container h1, h2, .contact-form h2 {
-  border: 4px solid #5c3d23;
   color: white;
-  border-radius: 7px;
   background: linear-gradient(45deg, rgba(28, 21, 16, 0.8078431373), rgba(137, 100, 66, 0.7254901961));
-  padding: 10px 50px;
+}
+
+h2, .contact-form h2 {
+  border: 4px solid #5c3d23;
+}
+
+.h1-container h1 {
+  border-top: 4px solid #5c3d23;
+  border-bottom: 4px solid #5c3d23;
 }
 
 .contact-form {
@@ -571,11 +578,17 @@ p, a, li, h1, h2 {
 .box-contain {
   flex-direction: column;
   width: auto;
-  text-align: center;
+  height: 330px;
+  justify-content: space-between;
+  text-align: left;
   font-size: 18px;
+}
+.box-contain ul li {
+  list-style: circle;
 }
 
 .sidebar-container {
+  justify-content: space-evenly;
   gap: 20px;
   padding: 40px;
   box-shadow: 5px 5px 5px;
@@ -725,6 +738,12 @@ p, a, li, h1, h2 {
   padding: 10px;
 }
 
+/* --------------------media query desktop------------------- */
+@media (min-width: 1024px) {
+  .box-img-container {
+    height: 305px;
+  }
+}
 /* ---------------------media query tablet------------------- */
 @media (min-width: 769px) and (max-width: 1023px) {
   /* -------------welcome-carousel------------- */
@@ -772,10 +791,14 @@ p, a, li, h1, h2 {
     list-style: none;
   }
   .menu-men-container .menu-men .box-pages {
-    height: auto;
+    height: 100%;
+  }
+  .menu-men-container .menu-men .box-pages .box-img-container {
+    height: 450px;
   }
   .menu-men-container .menu-men .box-pages .box-contain {
-    padding: 30px;
+    height: 260px;
+    padding: 30px 30px 0;
   }
 }
 /* -------------------media query mobile-------------------- */
@@ -831,6 +854,7 @@ p, a, li, h1, h2 {
     list-style: none;
   }
   .box-contain {
+    height: auto;
     padding: 40px;
   }
 }
